@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #fefefe;
+  color: #333;
+}
+
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left nav a,
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.icon-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: #333;
+  margin-left: 15px;
+  transition: color 0.3s;
+}
+
+.icon-link:hover {
+  color: #007bff;
+}
+
+/* ✅ Full-width container */
+.container {
+  display: flex;
+  width: 100%;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Optional limited width container (for other pages if needed) */
+.container.limited {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+  flex: 1;
+}
+
+.filters h4 {
+  margin-bottom: 0.5rem;
+}
+
+.filters label {
+  display: block;
+  margin: 0.25rem 0;
+}
+
+.search-header {
+  margin-bottom: 1rem;
+}
+
+.search-header h2 {
+  margin-bottom: 0.5rem;
+}
+
+.tags span {
+  display: inline-block;
+  background: #fde2e2;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin: 4px 4px 0 0;
+  font-size: 0.8rem;
+}
+
+.search-bar {
+  margin-top: 1rem;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.book {
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.book img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.book h4 {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.book button {
+  background: #6366f1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.promo-box {
+  background: linear-gradient(to right, #667eea, #ef5ce3);
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.footer {
+  background: #fff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+}
+
+.subscribe {
+  margin: 1rem 0;
+}
+
+.subscribe input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.subscribe button {
+  padding: 0.5rem 1rem;
+  margin-left: 5px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

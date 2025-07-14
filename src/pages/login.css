@@ -1,0 +1,133 @@
+/* Base Reset */
+.login-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Full Screen Layout ONLY for login page */
+.login-page {
+  display: flex;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Left Section (Image/Gradient) */
+.login-page .left {
+  flex: 1;
+  background-image: linear-gradient(to top right, #ef5ce3, #667eea), url('https://source.unsplash.com/800x800/?library');
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+/* Right Section (Form) */
+.login-page .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+/* Form Container */
+.login-page .form-container {
+  width: 80%;
+  max-width: 400px;
+}
+
+.login-page h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.login-page .subtext {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Input Fields */
+.login-page input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit Button */
+.login-page button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Forgot Password Link */
+.login-page .toggle {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.login-page .toggle a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+/* Sign In / Sign Up Toggle */
+.login-page .switch-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.login-page .switch-btn {
+  padding: 8px 20px;
+  border: 2px solid #6366f1;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-page .switch-btn:hover {
+  background-color: #6366f1;
+  color: white;
+}
+
+.login-page .switch-btn.active {
+  background-color: #6366f1;
+  color: white;
+}
+
+/* Skip Button */
+.login-page .skip-btn {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.login-page .skip-btn a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login-page .skip-btn a:hover {
+  background-color: #333;
+  color: #fff;
+}
