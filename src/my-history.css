@@ -1,3 +1,4 @@
+/* === General Reset and Base === */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,34 +7,27 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
   background: #fefefe;
   color: #333;
 }
 
+/* === Header === */
 header {
   background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header-left,
-.header-right {
+.mh-header-left,
+.mh-header-right {
   display: flex;
   align-items: center;
 }
 
-.header-left nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
+.mh-header-left nav a,
 nav a {
   margin: 0 1rem;
   text-decoration: none;
@@ -41,7 +35,7 @@ nav a {
   font-weight: 500;
 }
 
-.icon-link {
+.mh-icon-link {
   text-decoration: none;
   font-size: 20px;
   color: #333;
@@ -49,78 +43,75 @@ nav a {
   transition: color 0.3s;
 }
 
-.icon-link:hover {
+.mh-icon-link:hover {
   color: #007bff;
 }
 
-.container {
+/* === Container === */
+.mh-container {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 2rem;
+  margin: 0 auto;
+  
 }
 
-h1, h2 {
-  margin-bottom: 1rem;
-}
-
-.stats {
+/* === Stats Section === */
+.mh-stats {
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem 0;
   flex-wrap: wrap;
 }
 
-.stat-box {
-  background-color: #fff;
+.mh-stat-box {
   flex: 1;
-  min-width: 200px;
+  background: #fff;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   text-align: center;
+  
 }
 
-.stat-box h2 {
+.mh-stat-box h2 {
+  color: #6366f1;
   font-size: 2rem;
-  color: #0077cc;
+  
 }
 
-.book-grid {
+.mh-stat-box p {
+  color: #777;
+}
+
+/* === Book Grid === */
+.mh-book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   margin-bottom: 2rem;
 }
 
-.book-card {
+.mh-book-card {
   background: #fff;
-  padding: 1rem;
-  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.book-card img {
+.mh-book-card img {
   width: 100%;
   max-width: 150px;
   max-height: 220px;
-  object-fit: cover;
   border-radius: 6px;
   margin-bottom: 0.75rem;
+  object-fit: cover;
 }
 
-.tags {
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-}
-
-.tag {
+.mh-tags {
   background-color: #e0e7ff;
   color: #333;
   padding: 0.3rem 0.6rem;
@@ -128,22 +119,33 @@ h1, h2 {
   font-size: 0.75rem;
 }
 
-.activity {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+.mh-tag {
+  background-color: #e0e7ff;
+  color: #333;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
 }
 
-.activity h3 {
+/* === Activity Section === */
+.mh-activity-section {
+  margin-top: 2rem;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+.mh-activity-section h3 {
   margin-bottom: 1rem;
 }
 
-.activity ul {
+.mh-activity-section ul {
   list-style: none;
+  
 }
 
-.activity li {
+.mh-activity-section li {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
@@ -151,29 +153,15 @@ h1, h2 {
   font-size: 0.95rem;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f1f1f1;
-  font-size: 0.85rem;
-  margin-top: 3rem;
+.mh-activity-section li:last-child {
+  border-bottom: none;
 }
 
-@media (max-width: 600px) {
-  header nav a {
-    margin: 0 0.5rem;
-  }
-
-  .stat-box {
-    min-width: 100%;
-  }
-
-  .book-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .activity li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+/* === Footer === */
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  background-color: #f0f0f0;
 }

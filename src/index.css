@@ -1,4 +1,4 @@
-/* Reset and Global Styles */
+/* === Reset and Global Styles === */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,8 +15,8 @@ body {
   color: #333;
 }
 
-/* Header Styles */
-header {
+/* === Header Styles === */
+.hp-header {
   background: white;
   display: flex;
   justify-content: space-between;
@@ -25,21 +25,21 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header-left,
-.header-right {
+.hp-header-left,
+.hp-header-right {
   display: flex;
   align-items: center;
 }
 
-.header-left nav a,
-nav a {
+.hp-header-left nav a,
+.hp-header nav a {
   margin: 0 1rem;
   text-decoration: none;
   color: #333;
   font-weight: 500;
 }
 
-.icon-link {
+.hp-icon-link {
   text-decoration: none;
   font-size: 20px;
   color: #333;
@@ -47,11 +47,11 @@ nav a {
   transition: color 0.3s;
 }
 
-.icon-link:hover {
+.hp-icon-link:hover {
   color: #007bff;
 }
 
-.signup-button {
+.hp-signup-button {
   background-color: #fb8429;
   color: white;
   padding: 6px 14px;
@@ -62,14 +62,14 @@ nav a {
   transition: background-color 0.3s ease;
 }
 
-.signup-button:hover {
+.hp-signup-button:hover {
   background-color: #1234dd;
 }
 
-/* Hero Section */
-.hero-section {
+/* === Hero Section === */
+.hp-hero-section {
   position: relative;
-  background-image: linear-gradient(to top right, #ef5ce3, #667eea),url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80');
+  background-image: linear-gradient(to top right, #ef5ce3, #667eea), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
   background-position: center;
   height: 350px;
@@ -78,7 +78,7 @@ nav a {
   justify-content: center;
 }
 
-.hero-section .overlay {
+.hp-hero-section .hp-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 8px;
@@ -86,18 +86,18 @@ nav a {
   color: #fff;
 }
 
-.hero-section h1 {
+.hp-hero-section h1 {
   color: white;
 }
 
-/* Search Bar */
-.search-bar {
+/* === Search Bar === */
+.hp-search-bar {
   display: flex;
   max-width: 500px;
   margin: 0 auto;
 }
 
-.search-bar input {
+.hp-search-bar input {
   flex: 1;
   padding: 12px;
   border: none;
@@ -106,7 +106,7 @@ nav a {
   font-size: 16px;
 }
 
-.search-bar button {
+.hp-search-bar button {
   padding: 12px 20px;
   border: none;
   background-color: orange;
@@ -115,15 +115,15 @@ nav a {
   cursor: pointer;
 }
 
-/* Hero Banner */
-.hero {
+/* === Hero Banner === */
+.hp-hero {
   background: url('https://source.unsplash.com/1200x400/?openbook') center/cover no-repeat;
   padding: 6rem 2rem;
   text-align: center;
   color: #333;
 }
 
-.hero h1 {
+.hp-hero h1 {
   background-color: rgba(255, 255, 255, 0.8);
   display: inline-block;
   padding: 1rem 2rem;
@@ -131,25 +131,25 @@ nav a {
   font-size: 2rem;
 }
 
-/* Section Layout */
-.section {
+/* === Section Layout === */
+.hp-section {
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
 }
 
-.section h2 {
+.hp-section h2 {
   margin-bottom: 1rem;
 }
 
-/* Book Grid */
-.book-grid {
+/* === Book Grid === */
+.hp-book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
 }
 
-.book {
+.hp-book {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -162,11 +162,11 @@ nav a {
   transition: transform 0.2s ease;
 }
 
-.book:hover {
+.hp-book:hover {
   transform: translateY(-4px);
 }
 
-.book img {
+.hp-book img {
   width: 120px;
   height: 180px;
   object-fit: cover;
@@ -174,30 +174,30 @@ nav a {
   margin-bottom: 0.75rem;
 }
 
-.book h4 {
+.hp-book h4 {
   font-size: 1rem;
   margin: 0.3rem 0;
 }
 
-.book p {
+.hp-book p {
   font-size: 0.85rem;
   color: #555;
   margin: 0.3rem 0;
 }
 
-/* Extra Sections */
-.genres,
-.insights,
-.events {
+/* === Extra Sections === */
+.hp-genres,
+.hp-insights,
+.hp-events {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.genre,
-.insight,
-.event {
+.hp-genre,
+.hp-insight,
+.hp-event {
   background: #fff;
   border: 1px solid #eee;
   padding: 1rem;
@@ -207,8 +207,8 @@ nav a {
   text-align: center;
 }
 
-/* Footer */
-footer {
+/* === Footer === */
+hp-footer {
   text-align: center;
   padding: 1rem;
   background-color: #f1f1f1;

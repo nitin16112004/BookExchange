@@ -12,15 +12,14 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div className="forgot-container">
-      <h2>Reset Password</h2>
-      <p>Enter your registered email and we'll send you a reset link.</p>
-      <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit">Send Reset Link</button>
+    <div className="fp-container">
+      <h2 className="fp-heading">Reset Password</h2>
+      <p className="fp-description">Enter your registered email and we'll send you a reset link.</p>
+      <form onSubmit={handleSubmit} className="fp-form">
+        <input type="email" placeholder="Enter your email" required className="fp-input" />
+        <button type="submit" className="fp-button">Send Reset Link</button>
       </form>
-      <Link to="/login" className="back-link">← Back to Sign In</Link>
+      <Link to="/login" className="fp-back-link">← Back to Sign In</Link>
     </div>
   );
 }
-

@@ -7,22 +7,27 @@ export default function LoginPage() {
 
   const handleLogin = (e) => {
     e.preventDefault();
+
+    // ✅ Save login status in localStorage
+    sessionStorage.setItem("isLoggedIn", "true");
+
+    // ✅ Redirect to homepage
     navigate("/");
   };
 
   return (
-    <div className="login-page">
-      <div className="left"></div>
-      <div className="right">
-        <div className="form-container">
+    <div className="bp-login-page">
+      <div className="bp-login-left"></div>
+      <div className="bp-login-right">
+        <div className="bp-login-form-container">
           <h2>Welcome to BookLoop!</h2>
-          <p className="subtext">Join our community of readers!</p>
+          <p className="bp-login-subtext">Join our community of readers!</p>
 
-          <div className="switch-buttons">
-            <Link to="/login" className="switch-btn active">
+          <div className="bp-login-switch-buttons">
+            <Link to="/login" className="bp-login-switch-btn active">
               Sign In
             </Link>
-            <Link to="/signup" className="switch-btn">
+            <Link to="/signup" className="bp-login-switch-btn">
               Sign Up
             </Link>
           </div>
@@ -33,12 +38,12 @@ export default function LoginPage() {
             <button type="submit">Sign in</button>
           </form>
 
-          <div className="toggle">
+          <div className="bp-login-toggle">
             <Link to="/forgot">Forgot password?</Link>
           </div>
 
-          <div className="skip-btn">
-            <Link to="/home">Skip for now</Link>
+          <div className="bp-login-skip-btn">
+            <Link to="/">Skip for now</Link>
           </div>
         </div>
       </div>

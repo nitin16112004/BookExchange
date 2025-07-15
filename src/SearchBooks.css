@@ -1,3 +1,4 @@
+/* Reset & Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,13 +13,14 @@ body {
   color: #333;
 }
 
+/* Header Styles */
 header {
   background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-left,
@@ -27,9 +29,13 @@ header {
   align-items: center;
 }
 
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
 .header-left nav a,
 nav a {
-  margin: 0 1rem;
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -47,18 +53,13 @@ nav a {
   color: #007bff;
 }
 
-/* ✅ Full-width container */
+/* Layout */
 .container {
   display: flex;
-  width: 100%;
-  padding: 2rem;
-  gap: 2rem;
-}
-
-/* Optional limited width container (for other pages if needed) */
-.container.limited {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 2rem auto;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .sidebar {
@@ -73,21 +74,24 @@ nav a {
   flex: 1;
 }
 
-.filters h4 {
+/* Sidebar Filters */
+.sidebar h4 {
   margin-bottom: 0.5rem;
 }
 
-.filters label {
+.sidebar label {
   display: block;
   margin: 0.25rem 0;
 }
 
+/* Search Header */
 .search-header {
   margin-bottom: 1rem;
 }
 
 .search-header h2 {
   margin-bottom: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .tags span {
@@ -111,10 +115,12 @@ nav a {
   border-radius: 4px;
 }
 
+/* Book Grid */
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .book {
@@ -123,6 +129,14 @@ nav a {
   text-align: center;
   border: 1px solid #eee;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.book:hover {
+  transform: translateY(-5px);
 }
 
 .book img {
@@ -145,8 +159,10 @@ nav a {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 500;
 }
 
+/* Promo Box */
 .promo-box {
   background: linear-gradient(to right, #667eea, #ef5ce3);
   padding: 1rem;
@@ -156,6 +172,18 @@ nav a {
   margin: 2rem 0;
 }
 
+.add-book-btn {
+  margin-top: 1rem;
+  background: white;
+  color: #6366f1;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
 .footer {
   background: #fff;
   padding: 2rem;
@@ -163,6 +191,7 @@ nav a {
   font-size: 0.9rem;
   color: #666;
   border-top: 1px solid #eee;
+  margin-top: 3rem;
 }
 
 .subscribe {

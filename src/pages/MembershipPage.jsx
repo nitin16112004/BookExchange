@@ -5,20 +5,20 @@ import "./membership.css";
 export default function MembershipPage() {
   return (
     <>
-      <header>
-        <div className="header-left">
+      <header className="membership-header">
+        <div className="membership-header-left">
           <strong>BookLoop</strong>
           <nav>
             <Link to="/">Home</Link>
             <Link to="/addbook">Add Book</Link>
-            <Link to="/searchbooks">Search Books</Link>
+            <Link to="/search">Search Books</Link>
             <Link to="/myhistory">My History</Link>
             <Link to="/borrowrequests">Borrow Requests</Link>
             <Link to="/exchangechat">Chat Section</Link>
             <Link to="/membership">Membership</Link>
           </nav>
         </div>
-        <div className="header-right">
+        <div className="membership-header-right">
           <Link to="/notifications" className="icon-link" title="Notifications">
             🔔
           </Link>
@@ -28,8 +28,8 @@ export default function MembershipPage() {
         </div>
       </header>
 
-      <div className="container">
-        <div className="status-box">
+      <div className="membership-container">
+        <div className="membership-status-box">
           <h2>Your Membership Status</h2>
           <h2 style={{ color: "#d946ef" }}>Premium Member</h2>
           <p>
@@ -39,7 +39,7 @@ export default function MembershipPage() {
           <button>Manage Subscription</button>
         </div>
 
-        <div className="benefits">
+        <div className="membership-benefits">
           <h3>Explore Your Premium Benefits</h3>
           <ul>
             <li>✅ Unlimited book borrow with no limits</li>
@@ -50,7 +50,7 @@ export default function MembershipPage() {
           </ul>
         </div>
 
-        <div className="faq">
+        <div className="membership-faq">
           <h3>Frequently Asked Questions</h3>
           <h4>How do I upgrade or change my membership?</h4>
           <p>You can manage your subscription from your profile page or click the button above.</p>
@@ -69,7 +69,7 @@ export default function MembershipPage() {
         </div>
       </div>
 
-      <footer>BookExchange © 2025 | Stay updated with BookExchange</footer>
+      <footer className="membership-footer">BookExchange © 2025 | Stay updated with BookExchange</footer>
     </>
   );
 }

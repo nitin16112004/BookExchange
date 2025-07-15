@@ -1,36 +1,41 @@
-      body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #fefefe;
-      color: #333;
-    }
-    header {
-      background: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .header-left,
-    .header-right {
-      display: flex;
-      align-items: center;
-    }
+/* === Reset & Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .header-left nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-    .icon-link {
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #fefefe;
+  color: #333;
+}
+
+/* === Header === */
+.ab-header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ab-header-left,
+.ab-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.ab-header-left nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.ab-icon-link {
   text-decoration: none;
   font-size: 20px;
   color: #333;
@@ -38,58 +43,69 @@
   transition: color 0.3s;
 }
 
-.icon-link:hover {
+.ab-icon-link:hover {
   color: #007bff;
 }
 
-    .banner {
-      background: linear-gradient(to right, #667eea, #ef5ce3);
-      padding: 3rem;
-      text-align: center;
-      color: white;
-    }
-    .form-wrapper {
-      max-width: 700px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-    .tips {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    button {
-      background: #6366f1;
-      color: white;
-      padding: 0.75rem 2rem;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 1rem;
-      font-size: 0.85rem;
-      color: #777;
-    }
-  
+/* === Banner === */
+.ab-banner {
+  background: linear-gradient(to right, #667eea, #ef5ce3);
+  padding: 3rem;
+  text-align: center;
+  color: white;
+}
+
+/* === Form Section === */
+.ab-form-wrapper {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.ab-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.ab-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.ab-form-group input,
+.ab-form-group textarea,
+.ab-form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.ab-tips {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.ab-form-wrapper button {
+  background: #6366f1;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #777;
+}

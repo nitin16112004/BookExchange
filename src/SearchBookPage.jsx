@@ -1,8 +1,62 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./search_book.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './SearchBooks.css';
 
-export default function SearchBookPage() {
+function SearchBooks() {
+  const searchResults = [
+    {
+      title: 'A Court of Thorns and Roses',
+      src: 'https://rarebirdsbooks.com/cdn/shop/files/website_cover_template_-_2024-09-13T145240.049_800x.png?v=1726235574'
+    },
+    {
+      title: 'The Hobbit',
+      src: 'https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg'
+    },
+    {
+      title: 'The Once and Future King',
+      src: 'https://m.media-amazon.com/images/I/81Pso1OY5TL.jpg'
+    },
+    {
+      title: 'Throne of Glass',
+      src: 'https://m.media-amazon.com/images/I/81REJ3+rUOL._UF1000,1000_QL80_.jpg'
+    },
+    {
+      title: 'Children of Blood and Bone',
+      src: 'https://m.media-amazon.com/images/I/91J5VV6U83L.jpg'
+    },
+    {
+      title: "Harry Potter and the Sorcerer's Stone",
+      src: 'https://m.media-amazon.com/images/I/91ocU8970hL._UF1000,1000_QL80_.jpg'
+    }
+  ];
+
+  const allBooks = [
+    {
+      title: 'Shadow and Bone',
+      src: 'https://m.media-amazon.com/images/I/816JhuO1cyS.jpg'
+    },
+    {
+      title: 'The Name of the Wind',
+      src: 'https://m.media-amazon.com/images/I/611iKJa7a-L.jpg'
+    },
+    {
+      title: 'The Way of Kings',
+      src: 'https://m.media-amazon.com/images/I/81rjJoKDOPL._UF1000,1000_QL80_.jpg'
+    },
+    {
+      title: 'Mistborn: The Final Empire',
+      src: 'https://npr.brightspotcdn.com/legacy/sites/kwit/files/201903/final_empire.jpg'
+    },
+    {
+      title: 'The Priory of the Orange Tree',
+      src: 'https://m.media-amazon.com/images/I/91JR5HRL84L._UF1000,1000_QL80_.jpg'
+    },
+    {
+      title: 'The First Law Trilogy',
+      src: 'https://m.media-amazon.com/images/I/91KcoX5BslL._UF1000,1000_QL80_.jpg'
+    }
+  ];
+
   return (
     <>
       <header>
@@ -25,7 +79,7 @@ export default function SearchBookPage() {
       </header>
 
       <div className="container">
-        <div className="sidebar">
+        <aside className="sidebar">
           <h4>Filters</h4>
           <p><strong>Genre</strong></p>
           <label><input type="checkbox" /> Fantasy</label><br />
@@ -34,106 +88,54 @@ export default function SearchBookPage() {
           <label><input type="checkbox" /> Sci-Fi</label><br />
           <label><input type="checkbox" /> Biography</label><br />
 
-          <p style={{ marginTop: "1rem" }}><strong>Rating</strong></p>
+          <p style={{ marginTop: '1rem' }}><strong>Rating</strong></p>
           <label><input type="checkbox" /> 5 Stars</label><br />
           <label><input type="checkbox" /> 4 Stars</label><br />
           <label><input type="checkbox" /> 3 Stars</label><br />
 
-          <p style={{ marginTop: "1rem" }}><strong>Availability</strong></p>
+          <p style={{ marginTop: '1rem' }}><strong>Availability</strong></p>
           <label><input type="checkbox" /> In Stock</label><br />
           <label><input type="checkbox" /> Coming Soon</label>
-        </div>
+        </aside>
 
         <main className="main">
-          <div className="search-header">
+          <section className="search-header">
             <h2>Search Results for "Fantasy Novels"</h2>
             <div className="tags">
-              <span>Fantasy</span><span>Fiction</span><span>4 Stars & Up</span>
+              <span>Fantasy</span>
+              <span>Fiction</span>
+              <span>4 Stars & Up</span>
             </div>
             <div className="search-bar">
               <input type="text" placeholder="Search books..." />
             </div>
-          </div>
+          </section>
 
-          <div className="book-grid">
-            {[
-              {
-                title: "A Court of Thorns and Roses",
-                img: "https://rarebirdsbooks.com/cdn/shop/files/website_cover_template_-_2024-09-13T145240.049_800x.png?v=1726235574"
-              },
-              {
-                title: "The Hobbit",
-                img: "https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg"
-              },
-              {
-                title: "The Once and Future King",
-                img: "https://m.media-amazon.com/images/I/81Pso1OY5TL.jpg"
-              },
-              {
-                title: "Throne of Glass",
-                img: "https://m.media-amazon.com/images/I/81REJ3+rUOL._UF1000,1000_QL80_.jpg"
-              },
-              {
-                title: "Children of Blood and Bone",
-                img: "https://m.media-amazon.com/images/I/91J5VV6U83L.jpg"
-              },
-              {
-                title: "Harry Potter and the Sorcerer's Stone",
-                img: "https://m.media-amazon.com/images/I/91ocU8970hL._UF1000,1000_QL80_.jpg"
-              }
-            ].map((book, idx) => (
+          <section className="book-grid">
+            {searchResults.map((book, idx) => (
               <div className="book" key={idx}>
-                <img src={book.img} alt={book.title} />
+                <img src={book.src} alt={book.title} />
                 <h4>{book.title}</h4>
                 <button>Share</button>
               </div>
             ))}
-          </div>
+          </section>
 
           <div className="promo-box">
             <h3>Share Your Books with the Community!</h3>
-            <Link to="/addbook">
-              <button style={{ marginTop: "1rem", background: "white", color: "#6366f1", border: "none", padding: "0.6rem 1.5rem", borderRadius: "5px", fontWeight: "bold", cursor: "pointer" }}>
-                Add Book
-              </button>
-            </Link>
+            <button className="add-book-btn">Add Book</button>
           </div>
 
           <h3>All Books Available</h3>
-          <div className="book-grid">
-            {[
-              {
-                title: "Shadow and Bone",
-                img: "https://m.media-amazon.com/images/I/816JhuO1cyS.jpg"
-              },
-              {
-                title: "The Name of the Wind",
-                img: "https://m.media-amazon.com/images/I/611iKJa7a-L.jpg"
-              },
-              {
-                title: "The Way of Kings",
-                img: "https://m.media-amazon.com/images/I/81rjJoKDOPL._UF1000,1000_QL80_.jpg"
-              },
-              {
-                title: "Mistborn: The Final Empire",
-                img: "https://npr.brightspotcdn.com/legacy/sites/kwit/files/201903/final_empire.jpg"
-              },
-              {
-                title: "The Priory of the Orange Tree",
-                img: "https://m.media-amazon.com/images/I/91JR5HRL84L._UF1000,1000_QL80_.jpg"
-              },
-              {
-                title: "The First Law Trilogy",
-                img: "https://m.media-amazon.com/images/I/91KcoX5BslL._UF1000,1000_QL80_.jpg"
-              }
-            ].map((book, idx) => (
+          <section className="book-grid">
+            {allBooks.map((book, idx) => (
               <div className="book" key={idx}>
-                <img src={book.img} alt={book.title} />
+                <img src={book.src} alt={book.title} />
                 <h4>{book.title}</h4>
                 <button>Share</button>
               </div>
             ))}
-          </div>
+          </section>
         </main>
       </div>
 
@@ -148,3 +150,5 @@ export default function SearchBookPage() {
     </>
   );
 }
+
+export default SearchBooks;
