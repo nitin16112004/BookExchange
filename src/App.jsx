@@ -29,7 +29,6 @@ function App() {
         <Route path="/membership" element={<ProtectedRoute><MembershipPage /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
         <Route path="/notifications" element={<ProtectedRoute><NotificationPage /></ProtectedRoute>} />
-
       </Routes>
     </Router>
   );
