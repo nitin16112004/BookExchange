@@ -1,25 +1,22 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom";
-import "./forgot.css";
+import "./forgot.css"; // optional: style as needed
 
 export default function ForgotPasswordPage() {
-  const navigate = useNavigate();
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Reset link sent!");
-    navigate("/login");
+    alert("Password reset link sent to your email!");
   };
 
   return (
     <div className="fp-container">
-      <h2 className="fp-heading">Reset Password</h2>
-      <p className="fp-description">Enter your registered email and we'll send you a reset link.</p>
-      <form onSubmit={handleSubmit} className="fp-form">
-        <input type="email" placeholder="Enter your email" required className="fp-input" />
-        <button type="submit" className="fp-button">Send Reset Link</button>
-      </form>
-      <Link to="/login" className="fp-back-link">← Back to Sign In</Link>
+      <div className="fp-box">
+        <h2>Forgot Password</h2>
+        <p>Enter your registered email to reset your password.</p>
+        <form onSubmit={handleSubmit}>
+          <input type="email" placeholder="email@example.com" required />
+          <button type="submit">Send Reset Link</button>
+        </form>
+      </div>
     </div>
   );
 }

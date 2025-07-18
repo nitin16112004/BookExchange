@@ -1,69 +1,55 @@
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  background: linear-gradient(120deg, #f3f4f6, #e0e7ff);
+.fp-container {
   display: flex;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  color: #333;
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.fp-container {
-  background: white;
-  padding: 2rem 3rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.fp-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
   width: 100%;
   max-width: 400px;
-  text-align: center;
 }
 
-.fp-container h2 {
+.fp-box h2 {
   margin-bottom: 10px;
-  font-weight: 600;
+  color: #1e90ff;
 }
 
-.fp-container p {
-  font-size: 0.95rem;
-  color: #555;
+.fp-box p {
+  font-size: 14px;
+  color: #666;
   margin-bottom: 20px;
 }
 
-.fp-container input[type="email"] {
+.fp-box input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 10px;
+  padding: 10px;
   border: 1px solid #ccc;
-  font-size: 1rem;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
 }
 
-.fp-container button {
+.fp-box button {
   width: 100%;
-  padding: 12px;
-  background-color: #4f46e5;
+  background-color: #1e90ff;
   color: white;
+  padding: 10px;
   border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.fp-container button:hover {
-  background-color: #4338ca;
-}
-
-.fp-back-link {
-  margin-top: 15px;
-  display: block;
-  color: #4f46e5;
-  text-decoration: none;
+  border-radius: 999px;
+  font-size: 15px;
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.fp-back-link:hover {
-  text-decoration: underline;
+.fp-box button:hover {
+  background-color: #0d6efd;
 }

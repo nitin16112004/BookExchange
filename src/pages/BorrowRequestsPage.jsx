@@ -17,7 +17,7 @@ export default function BorrowRequestsPage() {
             <Link to="/history">My History</Link>
             <Link to="/borrowrequests">Borrow Requests</Link>
             <Link to="/exchangechat">Chat Section</Link>
-            <Link to="/membership">Membership</Link>
+           
           </nav>
         </div>
         <div className="br-header-right">

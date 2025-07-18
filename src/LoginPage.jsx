@@ -38,13 +38,24 @@ export default function LoginPage() {
             <button type="submit">Sign in</button>
           </form>
 
-          <div className="bp-login-toggle">
+
+<div className="bp-login-skip-btn">
+  <button
+    type="button"
+    className="bp-skip-btn"
+    onClick={() => {
+      sessionStorage.setItem("isLoggedIn", "true");
+      sessionStorage.setItem("userRole", "guest");
+      navigate("/");
+    }}
+  >
+    Skip for now
+  </button>
+</div>
+ <div className="bp-login-toggle">
             <Link to="/forgot">Forgot password?</Link>
           </div>
 
-          <div className="bp-login-skip-btn">
-            <Link to="/">Skip for now</Link>
-          </div>
         </div>
       </div>
     </div>
